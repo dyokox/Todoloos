@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: IBM Plex Mono;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(assets/background-image.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.ibm-plex-mono-regular {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#second-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#input-box {
+    border-radius: 8px;
+    border: none;
+    height: 30px;
+    font-size: 17px;
+    width: 350px;
+    outline: none;
+    padding-left: 10px;
+    color: white;
+    background-color: rgb(255, 255, 255, 15%);
+}
+
+#add-button {
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    height: 32px;
+    width: 50px;
+    font-size: 15px;
+    background-color: rgb(255, 255, 255, 25%);
+    color: white;
+}
+
+#add-button:hover {
+    background-color: rgb(149, 199, 237, 45%);
+    transition: transform .3s ease-in-out;
+    transform: scale(1.05);
+}
+
+#todo {
+    width: 100%;
+    max-width: 540px;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px; 
+    background-color: rgb(149, 199, 237, 45%);
+}
+
+#text-logo {
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 15px 8px 12px 44px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    color: white;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(assets/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked {
+    color: #1d703e;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url(assets/checked.png);
+}
+
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 41px;
+    font-size: 28px;
+    color: rgb(255, 255, 255);
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover {
+    background: rgb(130, 174, 208);
+}
+
+#input-box::placeholder {
+    color: rgb(220, 220, 220);
+}
